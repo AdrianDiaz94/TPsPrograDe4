@@ -67,22 +67,22 @@ public class Polinomio {
 	}
 	
 	/*****Polinomio con Programacion dinamica******/	
-	public double EvaluaProgDinamica (double x){
+	public double evaluarProgDinamica (double x){
     		int n=this.grado;
     		double suma=0;
     		double pot=1;
-    		for(int i=n;i>=0;i++){
+    		for(int i=n;i>=0;i--){
         		suma+=this.coeficientes[i]*pot;
         		pot*=x;
     		}
     		return suma;
 	}
 
- 	public double EvaluaMejorada (double x){
+ 	public double evaluarMejorada (double x){
         	int n=this.grado;
         	double pot=x;
         	double suma=this.coeficientes[n]+(this.coeficientes[n-1]*pot);
-        	for(int i=n-2;i>=0;i++){
+        	for(int i=n-2;i>=0;i--){
             		pot*=x;
             		suma+=this.coeficientes[i]*pot;
         	}
