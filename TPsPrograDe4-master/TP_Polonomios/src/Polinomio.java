@@ -8,7 +8,7 @@ public class Polinomio {
 	this.coeficientes=coef;
 	}
 
-	/****Polinomio con algoritmo de Multiplicaciones sucecsivas****/
+	/****Polinomio con algoritmo de Multiplicaciones sucesivas****/
 	public double evaluarMSucesivas (double x) {
 		double suma = 0;
 		double num = 0;
@@ -35,8 +35,8 @@ public class Polinomio {
 			return 1;
 		return x*potencia(x,n-1);
 			
-		/****Polinomio con recursividad que dif par y impar****/
 	}
+	/****Polinomio con recursividad que dif par y impar****/
 	double evaluarRecursivaPar (double x) {
 		double resultado=0;
 		for(int i=0;i<=this.grado;i++)
@@ -63,7 +63,7 @@ public class Polinomio {
 	}
 	
 	/*****Polinomio con Programacion dinamica******/	
-	public double EvaluaProgDinamica (double x){
+	public double evaluaProgDinamica (double x){
     		int n=this.grado;
     		double suma=0;
     		double pot=1;
@@ -73,8 +73,8 @@ public class Polinomio {
     		}
     		return suma;
 	}
-
- 	public double EvaluaMejorada (double x){
+	/*****Polinomio con evaluarMejorada******/
+ 	public double evaluaMejorada (double x){
         	int n=this.grado;
         	double pot=x;
         	double suma=this.coeficientes[n]+(this.coeficientes[n-1]*pot);
