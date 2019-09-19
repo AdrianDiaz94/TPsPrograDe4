@@ -7,6 +7,11 @@ public class Polinomio {
 	this.grado=grado;
 	this.coeficientes=coef;
 	}
+	
+	public Polinomio(double[] coeficientes) {
+		this.grado = coeficientes.length - 1;
+		this.coeficientes = coeficientes;
+	}
 
 	/****Polinomio con algoritmo de Multiplicaciones sucesivas****/
 	public double evaluarMSucesivas (double x) {
