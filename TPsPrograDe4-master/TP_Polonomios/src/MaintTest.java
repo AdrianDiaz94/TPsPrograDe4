@@ -2,62 +2,57 @@
 public class MaintTest {
 
 	public static void main(String[] args) {
-		int grado = 2000;
+		int grado =2000;
 		long start, end;
-		int X = 37;
+		int X = 3;
 	double[] d = new double [grado+1];
 		for (int i = 0; i < grado+1; i++) {
-			d[i] = Math.random()*10;
+		d[i] = Math.random()*10;
 		}
 	
-		System.out.println("**********************EVALUAR MULTIPLICACIONES SUCESIVAS********************");
 		Polinomio p1= new Polinomio(grado,d);
+		System.out.println("**********************EVALUAR MULTIPLICACIONES SUCESIVAS********************");
 		start=System.nanoTime();
-		System.out.println("resultado: " + p1.evaluarMSucesivas(X));
+	    System.out.println("resultado: " + p1.evaluarMSucesivas(X));
 		end=System.nanoTime();
 		System.out.println("tiempo en nanosegundos:"+(end-start));		
 
 		System.out.println("**********************EVALUAR RECURSIVA********************");
-		Polinomio p2= new Polinomio(grado,d);
 		start=System.nanoTime();
-		System.out.println("resultado: " + p2.evaluarRecursiva(X));
+		System.out.println("resultado: " + p1.evaluarRecursiva(X));
 		end=System.nanoTime();
 		System.out.println("tiempo en nanosegundos:"+(end-start));		
 		
 		System.out.println("**********************EVALUAR RECURSIVA PAR********************");
-		Polinomio p3= new Polinomio(grado,d);
 		start=System.nanoTime();
-		System.out.println("resultado: " + p3.evaluarRecursiva(X));
+		System.out.println("resultado: " + p1.evaluarRecursiva(X));
 		end=System.nanoTime();
 		System.out.println("tiempo en nanosegundos:"+(end-start));	
 		
 		System.out.println("**********************EVALUAR PROGRAMACION DINAMICA********************");
-		Polinomio p4= new Polinomio(grado,d);
 		start=System.nanoTime();
-		System.out.println("resultado: " + p4.evaluaProgDinamica(X));
+		System.out.println("resultado: " + p1.evaluaProgDinamica(X));
 		end=System.nanoTime();
 		System.out.println("tiempo en nanosegundos:"+(end-start));	
 		
 		System.out.println("**********************EVALUAR MEJORADA********************");
-		Polinomio p5= new Polinomio(grado,d);
 		start=System.nanoTime();
-		System.out.println("resultado: " + p5.evaluaMejorada(X));
+		System.out.println("resultado: " + p1.evaluaMejorada(X));
 		end=System.nanoTime();
 		System.out.println("tiempo en nanosegundos:"+(end-start));		
 		
 		System.out.println("**********************EVALUAR POW********************");
-		Polinomio p6= new Polinomio(grado,d);
 		start=System.nanoTime();
-		System.out.println("resultado: " + p6.evaluarRecursiva(X));
+	    System.out.println("resultado: " + p1.evaluarRecursiva(X));
 		end=System.nanoTime();
 		System.out.println("tiempo en nanosegundos:"+(end-start));			
 
 		System.out.println("**********************EVALUAR HORNER********************");
-		Polinomio p7= new Polinomio(grado,d);
 		start=System.nanoTime();
-		System.out.println("resultado: " + p7.evaluarHorner(X));
+		System.out.println("resultado: " + p1.evaluarHorner(X));
 		end=System.nanoTime();
 		System.out.println("tiempo en nanosegundos:"+(end-start));	
+		
 
 	}
 }
