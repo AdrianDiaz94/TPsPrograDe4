@@ -13,7 +13,7 @@ public class Polinomio {
 		double suma = 0;
 		double num = 0;
 		for (int i = 0; i < coeficientes.length; i++) {
-			for (int j = i; j < coeficientes.length; j++) {
+			for (int j = i; j < coeficientes.length-1; j++) {
 				num = coeficientes[i]*= x;
 			}
 			suma += num;
