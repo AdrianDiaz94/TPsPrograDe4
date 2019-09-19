@@ -11,14 +11,18 @@ public class Polinomio {
 	/****Polinomio con algoritmo de Multiplicaciones sucesivas****/
 	public double evaluarMSucesivas (double x) {
 		double suma = 0;
-		double num = 0;
 		for (int i = 0; i < coeficientes.length; i++) {
-			for (int j = i; j < coeficientes.length-1; j++) {
-				num = coeficientes[i]*= x;
-			}
-			suma += num;
+				suma += coeficientes[i] * potencia_sucesivas(x, grado - i);
 		}
 		return suma;
+	}
+	
+	private double potencia_sucesivas(double x, int n) {
+		double p = 1;
+		for (int i = 0; i < n; i++) {
+			p *= x;
+		}
+		return p;
 	}
 	
 /******Polinomio con recursividad*****/
